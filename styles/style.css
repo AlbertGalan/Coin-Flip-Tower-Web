@@ -5,8 +5,11 @@
     --header-background-color: #adb5bd;
 
     --text-color: white;
+    --ice-color-primary: #c6dfff;
+    --ice-color-secondary: #cac6ff;
+    --ice-color-terciary: #5ca3ff;
 }
-
+    
 @font-face {
     font-family: 'Jacquard';
     src: url('../fonts/Jacquard12-Regular.ttf') format('truetype');
@@ -40,4 +43,11 @@ footer {
     align-items: center;
     background-color: var(--footer-background-color);
     padding: 2rem;
+}
+
+p {
+    font-size: 12px;
+}
+
+.logo {
 }
