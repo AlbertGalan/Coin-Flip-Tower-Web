@@ -21,6 +21,11 @@
     font-weight: 600;
 }
 
+@font-face {
+    font-family: 'GNF';
+    src: url('../fonts/GNF\ TTF.ttf') format('truetype');
+}
+
 body {
     margin: 0;
     background: 
@@ -42,17 +47,32 @@ h2 {
     font-size: 4rem;
 }
 
+h3 {
+    font-size: 3rem;
+}
+
+h4 {
+    font-size: 2rem;
+}
+
 p {
     font-size: 1rem;
+    font-family: 'GNF', serif;
 }
 
 header {
     background-color: var(--header-background-color);
-    padding: 1rem;
+    padding: 2rem;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    height: 2.5  rem;
+    height: 2.5rem;
+    position: sticky;
+    top: 0;
+}
+
+header > a > img {
+    max-width: 5rem;
 }
 
 main {
@@ -77,21 +97,94 @@ footer > nav {
 
 .left-container {
     display: flex;
-    flex-direction: row;
-    justify-content: start;
-    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
 }
 
 .center-container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
 .right-container {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+}
+
+.row {
+    display: flex;
     flex-direction: row;
-    justify-content: end;
-    align-items: center;
+}
+
+/* Colors */
+    /* Normal */
+    .dark-color {
+        background-color: var(--background-color-dark);
+    }
+
+    .bright-color {
+        background-color: var(--background-color-bright);
+    }
+
+    /* Ice */
+    .primary-color-ice {
+        background-color: var(--ice-color-primary);
+    }
+
+    .secondary-color-ice {
+        background-color: var(--ice-color-secondary);
+    }
+
+    .tertiary-color-ice {
+        background-color: var(--ice-color-tertiary);
+    }
+
+    /* Fire */
+    .primary-color-fire {
+        background-color: var(--fire-color-primary);
+    }
+
+    .secondary-color-fire {
+        background-color: var(--fire-color-secondary);
+    }
+
+    .tertiary-color-fire {
+        background-color: var(--fire-color-tertiary);
+    }
+
+/* SPACE IN BETWEEN */
+
+.p-1 {
+   padding: 1rem; 
+}
+.p-2 {
+   padding: 2rem; 
+}
+.p-3 {
+   padding: 3rem; 
+}
+
+.m-1 {
+   margin: 1rem; 
+}
+.m-2 {
+   margin: 2rem; 
+}
+.m-3 {
+   margin: 3rem; 
+}
+
+.g-1 {
+   gap: 1rem; 
+}
+.g-2 {
+   gap: 2rem; 
+}
+.g-3 {
+   gap: 3rem; 
 }
