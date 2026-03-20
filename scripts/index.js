@@ -24,8 +24,9 @@ function pintarPosts(posts) {
 
     const postlist = document.getElementById("post-list");
 
+    console.log(posts);
+
     for (let i = 0; posts.data.length; i++) {
-        
         
         //Estructura HTML
 
