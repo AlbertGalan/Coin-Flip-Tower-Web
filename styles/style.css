@@ -121,6 +121,30 @@ footer > nav {
     flex-direction: row;
 }
 
+.j-start {
+    justify-content: start;
+}
+
+.j-center {
+    justify-content: center;
+}
+
+.j-end {
+    justify-content: end;
+}
+
+.a-start {
+    align-items: start;
+}
+
+.a-center {
+    align-items: center;
+}
+
+.a-end {
+    align-items: end;
+}
+
 /* Colors */
     /* Normal */
     .dark-color {
@@ -186,9 +210,18 @@ footer > nav {
    gap: 2rem; 
 }
 .g-3 {
-   gap: 3rem; 
-    justify-content: end;
-    align-items: center;
+   gap: 3rem;
+}
+
+/* Specific elements */
+.post-item {
+    width: 85vw;
+    background-color: red;
+}
+
+.post-item > img {
+    width: 10rem;
+    height: 10rem;
 }
 
 .cafebutton {
