@@ -31,12 +31,15 @@
 </head>
 <body>
     <main>
+        <!-- Thumbnail -->
         <section class="center-container row">
             <img href="brr"></img>
             <div>
                 <h1>Coin Flip Tower</h1>
             </div>
         </section>
+
+        <!-- Trailer & Game -->
         <section class="center-container">
             <h2>Trailer<h2>
             <video controls poster="miniatura.jpg">
@@ -45,71 +48,59 @@
             </video>
             <button><a href="html-sections/gameplay.html">Jugar</a></button>
         </section>
+
+        <!-- Top players list -->
         <section class="center-container">
-                <h2>Classificació</h2>
-                <div class="row g-3">
-                    <div>
-                        <p>pedro</p>
-                        <span></span>
-                    </div>
-                    <div>
-                        <p>pedro</p>
-                        <span></span>
-                    </div>
-                    <div>
-                        <p>pedro</p>
-                        <span></span>
-                    </div>
+            <h2>Classificació</h2>
+            <div class="row g-3">
+                <div>
+                    <p id="top2">pedro</p>
+                    <span class="tier-2"></span>
                 </div>
-                <a href="/html-sections/comunitat.html">Veure classificació completa</a>
-            <article class="row g-1">
-                <a href="/html-sections/historia.html">
-                    <div class="center-container">
-                        <img src="https://lipsum.app/480x480/">
-                            <div>
-                                <p>HISTORIA</p>
-                            </div>
-                    </div>
-                </a>
-                <a href="/html-sections/media.html">
-                    <div class="center-container">
-                        <img src="https://lipsum.app/480x480/">
-                            <div>
-                                <p>MEDIA</p>
-                            </div>
-                    </div>
-                </a>
-            </article>
+                <div>
+                    <p id="top1">pedro</p>
+                    <span class="tier-1"></span>
+                </div>
+                <div>
+                    <p id="top3">pedro</p>
+                    <span class="tier-3"></span>
+                </div>
+            </div>
+            <a href="/html-sections/comunitat.html">Veure classificació completa</a>
         </section>
+
+        <!-- Game lore & Game media -->
+        <section class="row g-1">
+            <a href="/html-sections/historia.html">
+                <article class="center-container">
+                    <img src="https://lipsum.app/480x480/">
+                    <h3>HISTORIA</h3>
+                </article>
+            </a>
+            <a href="/html-sections/media.html">
+                <article class="center-container">
+                    <img src="https://lipsum.app/480x480/">
+                    <h3>MEDIA</h3>
+                </article>
+            </a>
+        </section>
+
+        <!-- Game blog -->
         <section class="center-container">
             <a href="html-sections/blog.html">
                 <h2>Blog</h2>
             </a>
-            <article>
-                <div>
-                    <img>
+            <div>
+                <article class="post-item row j-start a-start g-1 p-1 m-2">
                     <div>
-                        <h4>Titol targeta</h4>
-                        <p>Text secundari</p>
+                        <h4 class="m-1">Titol targeta</h4>
+                        <p class="m-1">Text secundari</p>
                     </div>
-                </div>
-                <div>
-                    <img>
-                    <div>
-                        <h4>Titol targeta</h4>
-                        <p>Text secundari</p>
-                    </div>
-                </div>
-                <div>
-                    <img>
-                    <div>
-                        <h4>Titol targeta</h4>
-                        <p>Text secundari</p>
-                    </div>
-                </div>
-            </article>
+                </article>
+            </div>
         </section>
     </main>
+
     <footer>
         <nav>
             <a href="html-sections/contacte.html">CONTACTE</a>
