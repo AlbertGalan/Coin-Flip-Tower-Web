@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
 
     actualitzarPodium();
+    actualizarBlog();
 })
 
 function actualitzarPodium() {
@@ -11,6 +12,26 @@ function actualitzarPodium() {
         .catch(error => console.log(error));
 }
 
+function actualizarBlog() {
+
+    fetch("https://phpstack-1076337-5399863.cloudwaysapps.com/api/posts/pHJNhm719MN5LCVqE839lOse0qvlbL1lBXndZmAWoJfiPXZFQHmgNQrzUHYS")
+        .then(resposta => resposta.json())
+        .then(dades => pintarPosts(dades))
+        .catch(error => console.log(error));
+}
+
+function pintarPosts(posts) {
+
+    const postlist = document.getElementById("post-list");
+
+    for (let i = 0; posts.data.length; i++) {
+        
+        
+        //Estructura HTML
+
+
+    }
+}
 
 function pintarUsuaris(usuaris) {
 
