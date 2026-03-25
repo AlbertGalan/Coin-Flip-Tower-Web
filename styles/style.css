@@ -105,6 +105,14 @@ header > a > img {
         linear-gradient(var(--background-color-bright), var(--background-color-dark));
 }
 
+.fire-section h1, .fire-section h2 {
+    color: var(--fire-color-tertiary);
+}
+
+.fire-section h3, .fire-section h4, .fire-section p {
+    color: var(--fire-color-secondary);
+}
+
 footer {
     display: flex;
     align-items: center;
@@ -255,6 +263,22 @@ hr {
 }
 
 /* Specific elements */
+.thumbnail {
+    height: 85vh;
+    background-image: url(/i/clear_sky.jpg);
+    background-position-y: -15vh;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.gourge {
+    background: url(/i/gourge.webp);
+    height: 8vh;
+    top: -8vh;
+    position: relative;
+    margin-bottom: -8vh;
+}
+
 .tier-1, .tier-2, .tier-3 {
     width: 20vw;
     box-shadow: 1vw 2vh 1rem var(--background-color-bright);
