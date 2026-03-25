@@ -58,9 +58,11 @@
         </section>
         <section class="center-container">
             <h2>Opinió Jugadors</h2>
-            <form action="/enviar-comentario" method="post">
-                <label for="comentario">Deja tu comentario:</label><br>
-                <textarea id="comentario" name="comentario" rows="4" cols="50" placeholder="Escribe aquí..."></textarea><br>
+            <form class="player-coments" action="/enviar-comentario" method="post">
+                <label for="nombre">El teu nom</label><br>
+                <input id="nombre" name="nombre" placeholder="Escriu el teu nom"><br>
+                <label for="comentario">Deixa un comentari:</label><br>
+                <textarea id="comentario" name="comentario" rows="4" cols="50" placeholder="Escriu aquí..."></textarea><br>
                 <input type="submit" value="Enviar" onclick="enviarComentario()">
             </form>
             <div class="individual-comment">
