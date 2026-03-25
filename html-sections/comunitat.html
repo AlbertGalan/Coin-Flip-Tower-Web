@@ -41,26 +41,29 @@
     <main>
         <h1>Classificació</h1>
         <section class="center-container">
-            <table>
+            <table class=player-table>
                 <thead>
                     <tr>
                         <th>Jugador</th>
-                        <th>Tiempo</th>
-                        <th>Final</th>
+                        <th>Puntos</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>Celda A</td>
                         <td>Celda B</td>
-                        <td>Celda C</Command></td>
                     </tr>
                 </tbody>
             </table>
         </section>
-        <section class="center-container">  
+        <section class="center-container">
             <h2>Opinió Jugadors</h2>
-            <div>
+            <form action="/enviar-comentario" method="post">
+                <label for="comentario">Deja tu comentario:</label><br>
+                <textarea id="comentario" name="comentario" rows="4" cols="50" placeholder="Escribe aquí..."></textarea><br>
+                <input type="submit" value="Enviar" onclick="enviarComentario()">
+            </form>
+            <div class="individual-comment">
                 <p>pedro</p>
                 <p>15 Feb. 2026</p>
                 <p>aehoilsafnldfhoaiosdñlasljghdfdoihashdfohfujimotocabronoasdyhfoiyueafi</p>
