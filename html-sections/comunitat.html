@@ -48,7 +48,7 @@
                         <th>Puntos</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody id="player-list">
                     <tr>
                         <td>Celda A</td>
                         <td>Celda B</td>
@@ -58,17 +58,18 @@
         </section>
         <section class="center-container">
             <h2>Opinió Jugadors</h2>
-            <form class="player-coments" action="/enviar-comentario" method="post">
+            <form id="submit" class="player-coments">
                 <label for="nombre">El teu nom</label><br>
                 <input id="nombre" name="nombre" placeholder="Escriu el teu nom"><br>
                 <label for="comentario">Deixa un comentari:</label><br>
                 <textarea id="comentario" name="comentario" rows="4" cols="50" placeholder="Escriu aquí..."></textarea><br>
-                <input type="submit" value="Enviar" onclick="enviarComentario()">
+                <button type="submit">Enviar</button>
             </form>
-            <div class="individual-comment">
-                <p>pedro</p>
-                <p>15 Feb. 2026</p>
-                <p>aehoilsafnldfhoaiosdñlasljghdfdoihashdfohfujimotocabronoasdyhfoiyueafi</p>
+            <div id="opinion-list">
+                <div class="individual-comment">
+                    <p>pedro</p>
+                    <p>aehoilsafnldfhoaiosdñlasljghdfdoihashdfohfujimotocabronoasdyhfoiyueafi</p>
+                </div>
             </div>
         </section>
     </main>
@@ -81,4 +82,5 @@
         <p>© 2026 Coin Flip Tower. Tots els drets reservats. Coin Flip Tower és un projecte acadèmic desenvolupat per Albert Galán. Tots els noms, personatges, història, mecàniques i elements del joc presentats en aquesta pàgina formen part del concepte del videojoc. Queda prohibida la reproducció total o parcial del contingut d’aquesta web sense autorització de l’autor.</p>
     </footer>
 </body>
+<script src="../scripts/comunitat.js"></script>
 </html>

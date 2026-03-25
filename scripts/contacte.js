@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     let sendButton = document.getElementById("submit");
 
-    sendButton.addEventListener("click", function() {
+    sendButton.addEventListener("submit", function() {
 
         const name = document.getElementById("name");
         const email = document.getElementById("email");

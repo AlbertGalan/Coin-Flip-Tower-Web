@@ -271,14 +271,14 @@ hr {
 /* Specific elements */
 .thumbnail {
     height: 85vh;
-    background-image: url(/i/clear_sky.jpg);
+    background-image: url(../i/clear_sky.jpg);
     background-position-y: -15vh;
     background-size: cover;
     background-attachment: fixed;
 }
 
 .gourge {
-    background: url(/i/gourge.webp);
+    background: url(../i/gourge.webp);
     height: 8vh;
     top: -8vh;
     position: relative;
