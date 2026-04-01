@@ -398,3 +398,30 @@ hr {
     width: 10rem;
     height: 10rem;
 }
+
+    /* Clasificacion page */
+            .player-table{
+                width: 64vw;
+                box-shadow: 1vw 2vh 1rem var(--background-color-bright);
+                background-color: var(--ice-color-secondary);
+                border-radius: 5px;
+                
+            }
+            table tr:nth-child(even) {
+            background-color: var(--ice-color-primary);
+            }
+
+            table tr:nth-child(odd) {
+            background-color: var(--ice-color-secondary);
+            
+            }
+
+            table th {
+            background-color: var(--ice-color-tertiary);
+            color: white;
+            }
+
+            
+            #player-list{
+                
+            }
