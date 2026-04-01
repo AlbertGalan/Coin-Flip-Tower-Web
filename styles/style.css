@@ -66,18 +66,62 @@ a {
 
 /* Page elements */
 header {
-    background-color: var(--header-background-color);
-    padding: 2rem;
+    background: 
+        url('../i/Bricks_diffuse.webp') center / contain,
+        linear-gradient(var(--background-color-bright), var(--background-color-dark));
+    padding: 1.3rem;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    height: 2.5rem;
+    height: 2rem;
     position: sticky;
     top: 0;
+    z-index: 3;
+}
+
+header > nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    max-width: 50vw;
 }
 
 header > a > img {
-    max-width: 5rem;
+    max-width: 4rem;
+}
+
+header > nav a {
+  top: 0;
+  left: 0;
+  transition: all .1s linear 0s;
+  position: relative;
+  display: inline-block;
+  padding: 10px 10px;
+  background-color: gray;
+
+  color: black;
+  
+  box-shadow: -6px 6px 0, -5px 5px 0, -4px 4px 0, -3px 3px 0, -2px 2px 0, -1px 1px 0 black;
+  border-radius: 6px;
+  text-decoration: none;   
+}
+
+header > nav a:hover {
+    top: -2px;
+    left: 2px;
+    box-shadow: -8px 8px 0, -6px 6px 0, -4px 4px 0, -3px 3px 0, -2px 2px 0, -1px 1px 0 black;
+}
+
+header > nav a:active {
+    top: 3px;
+    left: -3px;
+    box-shadow: -3px 3px 0, -2px 2px 0, -1px 1px 0  black;
+}
+
+* {
+    position: relative;
+    z-index: 1;
 }
 
 main:not(.index) {
@@ -89,12 +133,14 @@ main:not(.index) {
     background: 
         url('../i/Bricks_diffuse.webp') center / contain,
         linear-gradient(var(--background-color-bright), var(--background-color-dark));
+    background-size: cover;
 }
 
 .ice-section {
     background: 
         url('../i/Ice_3_AmbientOcclusion.webp') center / contain,
-        linear-gradient(#b4b4b8);
+        linear-gradient(#a5a5a6);
+    background-size: cover;
 }
 
 .ice-section h1, .ice-section h2 {
@@ -109,6 +155,7 @@ main:not(.index) {
     background: 
         url('../i/Dry_Lava_BaseColor.webp') center / contain,
         linear-gradient(var(--background-color-bright), var(--background-color-dark));
+    background-size: cover;
 }
 
 .fire-section h1, .fire-section h2 {
@@ -270,16 +317,53 @@ hr {
 
 /* Specific elements */
 .thumbnail {
-    height: 85vh;
-    background-image: url(../i/clear_sky.jpg);
-    background-position-y: -15vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 0;
+
+    height: 90vh;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+    background-position-y: -10vh;
     background-size: cover;
+    background-repeat: no-repeat;
     background-attachment: fixed;
+}
+
+.light {
+    background-image: url(../i/clear_sky.jpg);
+}
+
+.dark img.light {
+    background-image: none;
+    display: none;
+}
+
+.dark {
+    background-image: url(../i/dark_sky.webp);
+}
+
+.light img.dark {
+    background-image: none;
+    display: none;
+}
+
+.thumbnail > img {
+    max-width: 6rem;
+    background-image: none;
 }
 
 .gourge {
     background: url(../i/gourge.webp);
+    margin-top: 90vh;
     height: 8vh;
+    background-size: contain;
     top: -8vh;
     position: relative;
     margin-bottom: -8vh;
@@ -306,35 +390,11 @@ hr {
 }
 
 .post-item {
-    width: 85vw;
+    width: 80vw;
+    height: 15vh;
 }
 
 .post-item > img {
     width: 10rem;
     height: 10rem;
-}
-
-.cafebutton {
-  top: 0;
-  left: 0;
-  transition: all .15s linear 0s;
-  position: relative;
-  display: inline-block;
-  padding: 10px 10px;
-  background-color: gray;
-  
-  text-transform: uppercase;
-  color: black;
-  font-family: arial;
-  letter-spacing: 1px;
-  
-  box-shadow: -6px 6px 0, -5px 5px 0, -4px 4px 0, -3px 3px 0, -2px 2px 0, -1px 1px 0 black;
-  border-radius: 6px;
-  text-decoration: none;   
-}
-
-.cafebutton:hover {
-    top: 3px;
-    left: -3px;
-    box-shadow: -3px 3px 0, -2px 2px 0, -1px 1px 0  black;
 }
