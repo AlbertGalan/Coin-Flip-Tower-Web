@@ -403,25 +403,32 @@ hr {
             .player-table{
                 width: 64vw;
                 box-shadow: 1vw 2vh 1rem var(--background-color-bright);
-                background-color: var(--ice-color-secondary);
                 border-radius: 5px;
-                
+                text-align: center;
             }
+            
             table tr:nth-child(even) {
             background-color: var(--ice-color-primary);
+            color: var(--ice-color-tertiary);
             }
 
             table tr:nth-child(odd) {
             background-color: var(--ice-color-secondary);
             
             }
-
+            
             table th {
             background-color: var(--ice-color-tertiary);
             color: white;
             }
 
-            
-            #player-list{
-                
+            .display-none-button{
+                display: none;
             }
+            
+            .botones-desplazamiento{
+                display: flex;
+                padding-top: 7vw;
+                gap: 42vw;
+            }
+            
