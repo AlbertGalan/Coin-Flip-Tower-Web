@@ -463,3 +463,11 @@ hr {
 .maps > img {
     max-width: 80vw;
 }
+
+.rerefons-page {
+    display: none;
+}
+
+.rerefons-page-active {
+    display: block;
+}
