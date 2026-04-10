@@ -40,8 +40,22 @@
     </header>
     <main class="ice-section">
         <h1>Classificació</h1>
-        <section class="center-container">
-            <table class=player-table>
+        <section class="center-container p-2 ice-section">
+            <div class="row a-end p-2 g-1">
+                <div class="column a-center">
+                    <p id="top2"></p>
+                    <div class="tier-2"></div>
+                </div>
+                <div class="column a-center">
+                    <p id="top1"></p>
+                    <div class="tier-1"></div>
+                </div>
+                <div class="column a-center">
+                    <p id="top3"></p>
+                    <div class="tier-3"></div>
+                </div>
+            </div>
+            <table class=player-table cellspacing="0" cellpadding="0">
                 <thead>
                     <tr>
                         <th>Jugador</th>
@@ -50,19 +64,23 @@
                 </thead>
                 <tbody id="player-list">
                     <tr>
-                        <td>Celda A</td>
-                        <td>Celda B</td>
+                        <td></td>
+                        <td></td>
                     </tr>
                 </tbody>
             </table>
+            <div class="botones-desplazamiento">
+                <button class="display-none-button" id="previous-users-page"><<-----</button>
+                <button id="next-users-page">----->></button>
+            </div>
         </section>
         <section class="center-container">
             <h2>Opinió Jugadors</h2>
             <form id="submit" class="player-coments">
                 <label for="nombre">El teu nom</label><br>
-                <input id="nombre" name="nombre" placeholder="Escriu el teu nom"><br>
+                <input id="nombre" name="nombre" placeholder="Escriu el teu nom" required><br>
                 <label for="comentario">Deixa un comentari:</label><br>
-                <textarea id="comentario" name="comentario" rows="4" cols="50" placeholder="Escriu aquí..."></textarea><br>
+                <textarea id="comentario" name="comentario" rows="4" cols="50" placeholder="Escriu aquí..." required></textarea><br>
                 <button type="submit">Enviar</button>
             </form>
             <div id="opinion-list">
@@ -70,6 +88,10 @@
                     <p>pedro</p>
                     <p>aehoilsafnldfhoaiosdñlasljghdfdoihashdfohfujimotocabronoasdyhfoiyueafi</p>
                 </div>
+            </div>
+            <div class="botones-desplazamiento">
+                <button class="display-none-button" id="previous-users-page"><<-----</button>
+                <button id="next-users-page">----->></button>
             </div>
         </section>
     </main>
