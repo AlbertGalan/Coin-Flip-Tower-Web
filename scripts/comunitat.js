@@ -172,6 +172,8 @@ function printOpinions(opinions) {
 
         div.appendChild(nom);
         div.appendChild(content);
+
+        div.classList.add("individual-comment");
         
         opinionList.appendChild(div);
     }
