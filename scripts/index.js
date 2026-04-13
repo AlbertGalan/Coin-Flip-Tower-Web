@@ -1,7 +1,27 @@
 document.addEventListener("DOMContentLoaded", function() {
 
+    const coin = document.querySelector(".coin");
+    const body = document.body;
+    let clicked = false;
+
+    coin.addEventListener("click", function() {
+        if (clicked) return;
+        clicked = true;
+        coin.classList.add("fly");
+        setTimeout(() => {
+            if (body.classList.contains("light")) {
+                body.classList.replace("light", "dark");
+            } else {
+                body.classList.replace("dark", "light");
+            }
+            coin.classList.remove("fly");
+            clicked = false;
+        }, 1785)
+    })
+
     actualitzarPodium();
     actualizarBlog();
+
 })
 
 function actualitzarPodium() {
