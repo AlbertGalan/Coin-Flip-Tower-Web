@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function() {
             }
             coin.classList.remove("fly");
             clicked = false;
-        }, 1785)
+        }, 1760)
     })
 
     actualitzarPodium();
