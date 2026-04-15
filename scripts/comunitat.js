@@ -2,6 +2,8 @@ let usersPage = 1;
 let opinionsPage = 1;
 let usuaris = [];
 let opinions = [];
+const nextUsersPage = document.getElementById("next-users-page");
+const nextOpinionsPage = document.getElementById("next-opinions-page");
 
 document.addEventListener("DOMContentLoaded", function() {
 
@@ -10,9 +12,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     const submitButton = document.getElementById("submit");
     const previousUsersPage = document.getElementById("previous-users-page");
-    const nextUsersPage = document.getElementById("next-users-page");
     const previousOpinionsPage = document.getElementById("previous-opinions-page");
-    const nextOpinionsPage = document.getElementById("next-opinions-page");
 
     previousUsersPage.addEventListener("click", function(event) {
         event.preventDefault();
@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const content = document.getElementById("comentario");
 
         const data = {
-            api_token: "pHJNhm719MN5LCVqE839lOse0qvlbL1lBXndZmAWoJfiPXZFQHmgNQrzUHYS",
+            api_token: "uZl9WgoE59y7c3JTN0dyj7KUxkKNP0MpS2NM8msPOZ4eUEtusumqYRHubOGS",
             name: nom.value,
             content: content.value
         }
@@ -101,11 +101,12 @@ document.addEventListener("DOMContentLoaded", function() {
 
 function actualitzarPodium() {
 
-    fetch("https://phpstack-1076337-5399863.cloudwaysapps.com/api/classification/pHJNhm719MN5LCVqE839lOse0qvlbL1lBXndZmAWoJfiPXZFQHmgNQrzUHYS")
+    fetch("https://phpstack-1076337-5399863.cloudwaysapps.com/api/classification/uZl9WgoE59y7c3JTN0dyj7KUxkKNP0MpS2NM8msPOZ4eUEtusumqYRHubOGS")
         .then(resposta => resposta.json())
         .then(dades => {
             printUsuaris(dades)
             printPodium(dades);
+            checkButtonUsers(dades.data.length);
             usuaris = dades;
         })
         .catch(error => console.log(error));
@@ -144,12 +145,19 @@ function printPodium(usuaris) {
     })
 }
 
+function checkButtonUsers(length) {
+    if (length < 11) {
+        nextUsersPage.style.display = "none";
+    }
+}
+
 function actualitzarOpinions() {
 
-    fetch("https://phpstack-1076337-5399863.cloudwaysapps.com/api/comments/pHJNhm719MN5LCVqE839lOse0qvlbL1lBXndZmAWoJfiPXZFQHmgNQrzUHYS")
+    fetch("https://phpstack-1076337-5399863.cloudwaysapps.com/api/comments/uZl9WgoE59y7c3JTN0dyj7KUxkKNP0MpS2NM8msPOZ4eUEtusumqYRHubOGS")
         .then(resposta => resposta.json())
         .then(dades => { 
             printOpinions(dades)
+            checkButtonOpinions(dades.data.length);
             opinions = dades;
         })
         .catch(error => console.log(error));
@@ -176,5 +184,11 @@ function printOpinions(opinions) {
         div.classList.add("individual-comment");
         
         opinionList.appendChild(div);
+    }
+}
+
+function checkButtonOpinions(length) {
+    if (length < 11) {
+        nextOpinionsPage.style.display = "none";
     }
 }

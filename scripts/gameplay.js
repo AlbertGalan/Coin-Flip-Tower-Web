@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 function actualitzarPodium() {
 
-    fetch("https://phpstack-1076337-5399863.cloudwaysapps.com/api/classification/pHJNhm719MN5LCVqE839lOse0qvlbL1lBXndZmAWoJfiPXZFQHmgNQrzUHYS/3")
+    fetch("https://phpstack-1076337-5399863.cloudwaysapps.com/api/classification/uZl9WgoE59y7c3JTN0dyj7KUxkKNP0MpS2NM8msPOZ4eUEtusumqYRHubOGS/3")
         .then(resposta => resposta.json())
         .then(dades => printUsuaris(dades))
         .catch(error => console.log(error));
