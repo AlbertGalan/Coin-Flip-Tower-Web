@@ -29,6 +29,9 @@ document.addEventListener("DOMContentLoaded", function() {
     actualitzarPodium();
     actualizarBlog();
 
+    setInterval(() => {
+        actualitzarPodium();
+    }, 300000);
 })
 
 function actualitzarPodium() {

@@ -1,29 +1,33 @@
-document.addEventListener("DOMContentLoaded", function() {
+// document.addEventListener("DOMContentLoaded", function() {
 
-    actualitzarPodium();
-    const body = document.body;
-    let tema = JSON.parse(localStorage.getItem("Tema"));
+//     actualitzarPodium();
+//     const body = document.body;
+//     let tema = JSON.parse(localStorage.getItem("Tema"));
 
-    if (!tema) {
-        body.classList.replace("light", "dark");
-    }
-})
+//     if (!tema) {
+//         body.classList.replace("light", "dark");
+//     }
 
-function actualitzarPodium() {
+//     setInterval(() => {
+//         actualitzarPodium();
+//     }, 2000)
+// })
 
-    fetch("https://phpstack-1076337-5399863.cloudwaysapps.com/api/classification/uZl9WgoE59y7c3JTN0dyj7KUxkKNP0MpS2NM8msPOZ4eUEtusumqYRHubOGS/3")
-        .then(resposta => resposta.json())
-        .then(dades => printUsuaris(dades))
-        .catch(error => console.log(error));
-}
+// function actualitzarPodium() {
 
-function printUsuaris(usuaris) {
+//     fetch("https://phpstack-1076337-5399863.cloudwaysapps.com/api/classification/uZl9WgoE59y7c3JTN0dyj7KUxkKNP0MpS2NM8msPOZ4eUEtusumqYRHubOGS/3")
+//         .then(resposta => resposta.json())
+//         .then(dades => printUsuaris(dades))
+//         .catch(error => console.log(error));
+// }
 
-    let top1 = document.getElementById("top1");
-    let top2 = document.getElementById("top2");
-    let top3 = document.getElementById("top3");
-    let tops = [top1, top2, top3];
-    tops.forEach((valor, index) => {
-        valor.textContent = usuaris.data[index].name
-    })
-}
+// function printUsuaris(usuaris) {
+
+//     let top1 = document.getElementById("top1");
+//     let top2 = document.getElementById("top2");
+//     let top3 = document.getElementById("top3");
+//     let tops = [top1, top2, top3];
+//     tops.forEach((valor, index) => {
+//         valor.textContent = usuaris.data[index].name
+//     })
+// }
