@@ -190,7 +190,7 @@ main:not(.index) {
 }
 
 .ice-section h3, .ice-section h4, .ice-section p {
-    color: var(--ice-color-secondary);
+    color: var(--ice-color-tertiary);
 }
 
 .ice-section button {
@@ -201,6 +201,19 @@ main:not(.index) {
     );
     color: var(--ice-color-tertiary);
     border: 2px solid var(--ice-color-tertiary);
+}
+
+.Historia, .Media{
+    background: var(--ice-color-primary);
+    border: 2px solid var(--ice-color-tertiary);
+    border-radius: 5px;
+    margin: 1rem;
+    width: 33%;
+
+}
+.Historia:hover, .Media:hover{
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 0.5rem 0.7rem 1rem rgba(0,0,0,0.5);
 }
 
 .fire-section {
