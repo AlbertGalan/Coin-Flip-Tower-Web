@@ -3,6 +3,11 @@ document.addEventListener("DOMContentLoaded", function() {
     const coin = document.querySelector(".coin");
     const body = document.body;
     let clicked = false;
+    let tema = JSON.parse(localStorage.getItem("Tema"));
+
+    if (!tema) {
+        body.classList.replace("light", "dark");
+    }
 
     coin.addEventListener("click", function() {
         if (clicked) return;
@@ -11,8 +16,10 @@ document.addEventListener("DOMContentLoaded", function() {
         setTimeout(() => {
             if (body.classList.contains("light")) {
                 body.classList.replace("light", "dark");
+                localStorage.setItem("Tema", JSON.stringify(false))
             } else {
                 body.classList.replace("dark", "light");
+                localStorage.setItem("Tema", JSON.stringify(true))
             }
             coin.classList.remove("fly");
             clicked = false;

@@ -1,6 +1,12 @@
 document.addEventListener("DOMContentLoaded", function() {
 
     let sendButton = document.getElementById("submit");
+    const body = document.body;
+    let tema = JSON.parse(localStorage.getItem("Tema"));
+
+    if (!tema) {
+        body.classList.replace("light", "dark");
+    }
 
     sendButton.addEventListener("submit", function() {
 

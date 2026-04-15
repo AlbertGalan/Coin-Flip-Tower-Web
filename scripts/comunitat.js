@@ -9,6 +9,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
     actualitzarPodium();
     actualitzarOpinions();
+    const body = document.body;
+    let tema = JSON.parse(localStorage.getItem("Tema"));
+
+    if (!tema) {
+        body.classList.replace("light", "dark");
+    }
+    
 
     const submitButton = document.getElementById("submit");
     const previousUsersPage = document.getElementById("previous-users-page");
