@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const text = document.getElementById("text");
 
         const data = {
-            api_token: "pHJNhm719MN5LCVqE839lOse0qvlbL1lBXndZmAWoJfiPXZFQHmgNQrzUHYS",
+            api_token: "uZl9WgoE59y7c3JTN0dyj7KUxkKNP0MpS2NM8msPOZ4eUEtusumqYRHubOGS",
             nombre: name.value,
             email: email.value,
             asunto: subject.value,
