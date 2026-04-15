@@ -25,7 +25,7 @@ function printPosts(posts) {
 
         p.classList.add("m-1");
         h4.classList.add("m-1");
-        article.classList.add("post-item", "row", "j-start", "a-start", "g-1", "p-1", "m-2");
+        article.classList.add("post-item", "row", "j-start", "a-start", "g-1", "p-1", "m-1");
 
         p.textContent = `${posts.data[i].content.slice(0, 99)}...` 
 
