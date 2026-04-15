@@ -1,6 +1,12 @@
 document.addEventListener("DOMContentLoaded", function() {
 
     actualitzarPodium();
+    const body = document.body;
+    let tema = JSON.parse(localStorage.getItem("Tema"));
+
+    if (!tema) {
+        body.classList.replace("light", "dark");
+    }
 })
 
 function actualitzarPodium() {

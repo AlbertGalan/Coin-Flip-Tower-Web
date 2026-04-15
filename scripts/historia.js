@@ -1,7 +1,13 @@
 document.addEventListener("DOMContentLoaded", function() {
 
     const characters = document.getElementsByClassName("character");
+    const body = document.body;
     let elementActive = null;
+    let tema = JSON.parse(localStorage.getItem("Tema"));
+
+    if (!tema) {
+        body.classList.replace("light", "dark");
+    }
 
     for (let i = 0; i < characters.length; i++) {
         
