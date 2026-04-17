@@ -24,7 +24,7 @@
     --text-color: #c8ced4;
 
     --ice-color-primary: #6ea8b7;
-    --ice-color-secondary: #3ba4bb;
+    --ice-color-secondary: #3b5fbb;
     --ice-color-tertiary: #005f8a;
 
     --fire-color-primary: #9e3f1a;
@@ -190,7 +190,7 @@ main:not(.index) {
 }
 
 .ice-section h3, .ice-section h4, .ice-section p {
-    color: var(--ice-color-secondary);
+    color: var(--ice-color-tertiary);
 }
 
 .ice-section button {
@@ -201,6 +201,19 @@ main:not(.index) {
     );
     color: var(--ice-color-tertiary);
     border: 2px solid var(--ice-color-tertiary);
+}
+
+.Historia, .Media{
+    background: var(--ice-color-primary);
+    border: 2px solid var(--ice-color-tertiary);
+    border-radius: 5px;
+    margin: 1rem;
+    width: 33%;
+
+}
+.Historia:hover, .Media:hover{
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 0.5rem 0.7rem 1rem rgba(0,0,0,0.5);
 }
 
 .fire-section {
@@ -410,11 +423,6 @@ hr {
     background-image: url(../i/dark_sky.webp);
 }
 
-/* Nahuel TO-DO List:
-    - Añadir fly class al div con classe .coin cuando se clickee la moneda (eliminar justo después de la animación)
-    - Añadir light/dark class al body al acabar la animación (para que se cambien los estilos justo cuando caiga la moneda) (cuidado con esto porque si no se timea bien se queda la moneda anterior y quedara raro)
-    - Blockear la posibilidad de clickar la moneda durante la animación */
-
 .coin {
     z-index: 5;
     width: 6rem;
@@ -428,6 +436,11 @@ hr {
     height: 100%;
     position: relative;
     transform-style: preserve-3d;
+    transition: all 0.4s ease-out;
+}
+
+.coin-inner:hover {
+    transform: scale(1.2);
 }
 
 .light .coin.fly .coin-inner {
@@ -538,7 +551,7 @@ hr {
 
 .h-scroll {
     width: 100%;
-    min-height: 85vh;
+    min-height: 100vh;
     display: flex;
     overflow-x: auto;
     overflow-y: hidden;
@@ -619,6 +632,18 @@ hr {
 .rerefons-page-active {
     display: block;
 }
+
+.rerefons-button {
+    width: 25vw;
+    height: 15vh;
+}
+
+.rerefons-button-list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
 .post-item > img {
     width: 10rem;
     height: 10rem;
@@ -854,6 +879,8 @@ hr {
 
 /* Pagina Equipo */
 
+            /* Pagina Equipo */
+
             .tarjetas-equipo{
                 display: grid;
                 grid-template-columns: repeat(2, 1fr);
@@ -866,12 +893,22 @@ hr {
                 width: 100%;
                 margin-bottom: 16px;
                 padding: 0 8px;
+
+            }
+            
+            .card p{
+                font-size: 1.2rem;
             }
 
             .card {
+                float: left;
+                width: 97%;
+                margin-bottom: 16px;
+                padding: 0 8px;
                 box-shadow: 0.4rem 0.6rem 1rem rgba(0,0,0,0.4);
-                border-radius: 4px;
+                border-radius: 5px;
                 transition: all 0.15s ease;
+
                 }
 
             .card:hover{
@@ -879,8 +916,16 @@ hr {
                 box-shadow: 0.5rem 0.7rem 1rem rgba(0,0,0,0.5);
             }
 
+            .card img{
+                width: 100%;
+                border-radius: 5px 5px 0 0;
+            }
+
             .container {
-                padding: 0 16px;
+                padding: 2px 16px;
+            }
+            .container h3{
+                margin-bottom: 20px;
             }
 
             .container::after, .row::after {
@@ -892,16 +937,21 @@ hr {
             .title {
                 color: grey;
             }
-
+            
+            @media screen and (max-width: 1392px) {
+                .tarjetas-equipo {
+                display:contents;    
+                }
+            }
             @media screen and (max-width: 650px) {
                 .tarjetas-equipo .team-column:last-child {
                 grid-column: 1;
                 display: flex;
                 justify-content: center;
-                }
 
-                .tarjetas-equipo{
-                    grid-template-columns: 1fr;
+                .team-column {
+                    width: 50%;
+                    display: block;
                 }
 
                 .tarjetas-equipo{
@@ -912,11 +962,22 @@ hr {
                         width: 100%;
                         display: block;
                     }
+                
+                .card{
+                    max-width: 50%;
+                    overflow-wrap: break-word;
+                    max-width: fit-content;
+                    margin-bottom: 2rem;
                 }
+            }
 
 /* Media queries */
 
 @media screen and (max-width: 768px) {
+    h3 {
+        font-size: 7vw;
+    }
+
     h4 {
         font-size: 4vw;
     }
@@ -930,7 +991,7 @@ hr {
     }
 
     .h-scroll {
-        min-height: 100vh;
+        min-height: 110vh;
     }
 
     .character {
@@ -939,6 +1000,15 @@ hr {
 
     .character-back {
         height: 50vh;
+    }
+
+    .rerefons-button-list {
+        flex-direction: column;
+    }
+
+    .rerefons-button {
+        width: 70vw;
+        font-size: 5vw;
     }
 }
 
@@ -985,7 +1055,7 @@ hr {
     }
 
     .h-scroll {
-        min-height: 60vh;
+        min-height: 90vh;
         min-width: 100vw;
         margin: 0;
         padding: 0;
@@ -1004,3 +1074,4 @@ hr {
         height: 50vh;
     }
 }
+            }
