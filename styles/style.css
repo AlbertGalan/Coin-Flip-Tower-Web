@@ -24,7 +24,7 @@
     --text-color: #c8ced4;
 
     --ice-color-primary: #6ea8b7;
-    --ice-color-secondary: #3ba4bb;
+    --ice-color-secondary: #3b5fbb;
     --ice-color-tertiary: #005f8a;
 
     --fire-color-primary: #9e3f1a;
@@ -410,11 +410,6 @@ hr {
     background-image: url(../i/dark_sky.webp);
 }
 
-/* Nahuel TO-DO List:
-    - Añadir fly class al div con classe .coin cuando se clickee la moneda (eliminar justo después de la animación)
-    - Añadir light/dark class al body al acabar la animación (para que se cambien los estilos justo cuando caiga la moneda) (cuidado con esto porque si no se timea bien se queda la moneda anterior y quedara raro)
-    - Blockear la posibilidad de clickar la moneda durante la animación */
-
 .coin {
     z-index: 5;
     width: 6rem;
@@ -428,6 +423,11 @@ hr {
     height: 100%;
     position: relative;
     transform-style: preserve-3d;
+    transition: all 0.4s ease-out;
+}
+
+.coin-inner:hover {
+    transform: scale(1.2);
 }
 
 .light .coin.fly .coin-inner {
@@ -538,7 +538,7 @@ hr {
 
 .h-scroll {
     width: 100%;
-    min-height: 85vh;
+    min-height: 100vh;
     display: flex;
     overflow-x: auto;
     overflow-y: hidden;
@@ -619,6 +619,18 @@ hr {
 .rerefons-page-active {
     display: block;
 }
+
+.rerefons-button {
+    width: 25vw;
+    height: 15vh;
+}
+
+.rerefons-button-list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
 .post-item > img {
     width: 10rem;
     height: 10rem;
@@ -917,6 +929,10 @@ hr {
 /* Media queries */
 
 @media screen and (max-width: 768px) {
+    h3 {
+        font-size: 7vw;
+    }
+
     h4 {
         font-size: 4vw;
     }
@@ -930,7 +946,7 @@ hr {
     }
 
     .h-scroll {
-        min-height: 100vh;
+        min-height: 110vh;
     }
 
     .character {
@@ -939,6 +955,15 @@ hr {
 
     .character-back {
         height: 50vh;
+    }
+
+    .rerefons-button-list {
+        flex-direction: column;
+    }
+
+    .rerefons-button {
+        width: 70vw;
+        font-size: 5vw;
     }
 }
 
@@ -985,7 +1010,7 @@ hr {
     }
 
     .h-scroll {
-        min-height: 60vh;
+        min-height: 90vh;
         min-width: 100vw;
         margin: 0;
         padding: 0;
