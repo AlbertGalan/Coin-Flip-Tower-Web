@@ -104,6 +104,10 @@ document.addEventListener("DOMContentLoaded", function() {
             .then(data => actualitzarOpinions())
             .catch(error => console.log(error))
     })
+
+    setInterval(() => {
+        actualitzarPodium();
+    }, 300000);
 })
 
 function actualitzarPodium() {
