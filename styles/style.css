@@ -56,24 +56,24 @@ h1,h2,h3,h4 {
 
 h1 {
     text-align: center;
-    font-size: 10vw;
+    font-size: 6rem;
     margin: 0;
 }
 
 h2 {
-    font-size: 5vw;
+    font-size: 5rem;
 }
 
 h3 {
-    font-size: 3vw;
+    font-size: 3rem;
 }
 
 h4 {
-    font-size: 2.5vw;
+    font-size: 2.5rem;
 }
 
 p, a, button{
-    font-size: 2vw;
+    font-size: 1.5rem;
     font-family: 'GNF', serif;
 }
 
@@ -106,6 +106,11 @@ button:active {
     box-shadow: 0.2rem 0.2rem 0.3rem rgba(0,0,0,0.4);
 }
 
+iframe {
+    width: 50vw;
+    height: 60vh;
+}
+
 /* Page elements */
 header {
     background: 
@@ -129,7 +134,7 @@ header > nav {
 }
 
 header > a > img {
-    max-width: 4rem;
+    max-width: 6rem;
 }
 
 header > nav a {
@@ -208,9 +213,10 @@ main:not(.index) {
     border: 2px solid var(--ice-color-tertiary);
     border-radius: 5px;
     margin: 1rem;
-    width: 33%;
-
+    width: 50vw;
+    transition: all 0.2s linear;
 }
+
 .Historia:hover, .Media:hover{
     transform: translateY(-2px) scale(1.03);
     box-shadow: 0.5rem 0.7rem 1rem rgba(0,0,0,0.5);
@@ -429,6 +435,11 @@ hr {
     height: 6rem;
     perspective: 600px;
     cursor: pointer;
+    transition: all 0.4s ease-out;
+}
+
+.coin:hover {
+    transform: scale(1.2);
 }
 
 .coin-inner {
@@ -437,10 +448,6 @@ hr {
     position: relative;
     transform-style: preserve-3d;
     transition: all 0.4s ease-out;
-}
-
-.coin-inner:hover {
-    transform: scale(1.2);
 }
 
 .light .coin.fly .coin-inner {
@@ -566,6 +573,11 @@ hr {
     min-width: 45vw;
     max-height: 60vh;
     position: relative;
+    transition: transform 0.3s ease;
+}
+
+.character:hover {
+    transform: scale(1.05);
 }
 
 .character-inner {
@@ -796,7 +808,7 @@ hr {
             }
 
             .arrow {
-                font-size: 5vw;
+                font-size: 3rem;
             }
 
 /* Pagina contactos */
@@ -942,12 +954,18 @@ hr {
                 .tarjetas-equipo {
                 display:contents;    
                 }
+
+                header > a > img {
+                    max-width: 4rem;
+                }
+
             }
             @media screen and (max-width: 650px) {
                 .tarjetas-equipo .team-column:last-child {
                 grid-column: 1;
                 display: flex;
                 justify-content: center;
+                }
 
                 .team-column {
                     width: 50%;
@@ -961,7 +979,7 @@ hr {
                 .team-column {
                         width: 100%;
                         display: block;
-                    }
+                }
                 
                 .card{
                     max-width: 50%;
@@ -975,15 +993,40 @@ hr {
 
 @media screen and (max-width: 768px) {
     h3 {
-        font-size: 7vw;
+        font-size: 3rem;
     }
 
     h4 {
-        font-size: 4vw;
+        font-size: 4rem;
     }
 
     p {
-        font-size: 3vw;
+        font-size: 3rem;
+    }
+
+    iframe {
+        height: 20vh;
+        width: 80vw;
+    }
+
+    .tier-1 {
+        height: 15vh;
+    }
+
+    .tier-2 {
+        height: 10vh;
+    }
+
+    .tier-3 {
+        height: 7.5vh;
+    }
+    
+    .thumbnail {
+    flex-direction: column;
+    }
+
+.gourge {
+    height: 4vh;
     }
 
     .post-item::before {
@@ -1008,17 +1051,25 @@ hr {
 
     .rerefons-button {
         width: 70vw;
-        font-size: 5vw;
+        font-size: 2rem;
     }
 }
 
 @media screen and (max-width: 425px) {
+    h1 {
+        font-size: 4rem;
+    }
+
+    h2, h3 {
+        font-size: 3rem;
+    }
+
     h4 {
-        font-size: 6vw;
+        font-size: 2rem;
     }
 
     p {
-        font-size: 5vw;
+        font-size: 1.5rem;
     }
     
     footer {
@@ -1031,15 +1082,11 @@ hr {
     }
 
     footer * {
-        font-size: 4vw;
-    }
-
-    footer p {
-        height: 20vh;
+        font-size: 1rem;
     }
 
     header nav a {
-        font-size: 5vw;
+        font-size: 1rem;
     }
 
     header nav a:not(:last-child) {
@@ -1055,7 +1102,7 @@ hr {
     }
 
     .h-scroll {
-        min-height: 90vh;
+        min-height: 110vh;
         min-width: 100vw;
         margin: 0;
         padding: 0;
@@ -1074,4 +1121,3 @@ hr {
         height: 50vh;
     }
 }
-            }
