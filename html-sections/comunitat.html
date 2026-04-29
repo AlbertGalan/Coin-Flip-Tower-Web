@@ -94,14 +94,18 @@
             </div>
         </section>
         <section class="center-container">
-            <h2>Opinió Jugadors</h2>
-            <form id="submit" class="player-coments">
-                <label for="nombre">El teu nom</label><br>
-                <input id="nombre" name="nombre" placeholder="Escriu el teu nom" required><br>
-                <label for="comentario">Deixa un comentari:</label><br>
-                <textarea id="comentario" name="comentario" rows="4" cols="50" placeholder="Escriu aquí..." required></textarea><br>
-                <button type="submit">Enviar</button>
-            </form>
+            <div class="player-coments column a-center p-2">
+                <h2>Opinió Jugadors</h2>
+                <form id="submit" class="column a-center">
+                    <div class="column a-start">
+                        <label for="nombre">El teu nom</label><br>
+                        <input id="nombre" name="nombre" placeholder="Escriu el teu nom" required><br>
+                        <label for="comentario">Deixa un comentari:</label><br>
+                        <textarea id="comentario" name="comentario" rows="4" cols="50" placeholder="Escriu aquí..." required></textarea><br>
+                    </div>
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
             <div id="opinion-list">
                 <div class="individual-comment">
                     <p>pedro</p>

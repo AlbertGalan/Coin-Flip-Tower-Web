@@ -56,34 +56,24 @@
             </div>
         </div>
     </header>
+
     <main class="normal-section">
         <section class="center-container">
             <h1>Contacte</h1>
             <h4>No hi ha res mes important que rebre el feedback dels nostres visitants!</h2>
         </section>
         <div class="contact-container">
-            <section>
-                <form class="contact-form">
-                    <div>
-                        <label for="nombre">Nom</label>
-                        <input id="name" type="text" required>
-                    </div>
-                    <div>
-                        <label for="email">Email</label>
-                        <input id="email" type="email" required>
-                    </div>
-                    <div>
-                        <label for="Raó">Raó</label>
-                        <input id="subject" type="text" required>
-                    </div>
-                    <div>
-                        <label for="missatge">Missatge</label>
-                        <textarea id="text" required></textarea>
-                    </div>
-                    <div>
-                        <button id="submit" type="submit">enviar</button>
-                    </div>
-                </form>
+            <form class="contact-form column a-center">
+                <label for="name">Nom</label>
+                <input id="name" name="name" type="text" required>
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" required>
+                <label for="subject">Raó</label>
+                <input id="subject" name="subject" type="text" required>
+                <label for="text">Missatge</label>
+                <textarea id="text" name="text" required></textarea>
+                <button id="submit" type="submit">Enviar</button>
+            </form>
         </div>
     </main>
     <footer>
