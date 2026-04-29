@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function() {
     if (!tema) {
         body.classList.replace("light", "dark");
     }
-
+    //NAHUEL HAZ QUE LA MONEDA GIRE AL CARGAR LA PAGINA
     coin.addEventListener("click", function() {
         if (clicked) return;
         clicked = true;
