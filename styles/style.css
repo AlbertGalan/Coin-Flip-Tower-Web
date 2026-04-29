@@ -5,6 +5,7 @@
     --header-background-color: #adb5bd;
 
     --text-color: white;
+    --hover-text-color: rgb(165, 166, 179);
 
     --ice-color-primary: #add3f4;
     --ice-color-secondary: #488ee4;
@@ -22,6 +23,7 @@
     --header-background-color: #343a40;
 
     --text-color: #c8ced4;
+    --hover-text-color: #8d8d9b;
 
     --ice-color-primary: #6ea8b7;
     --ice-color-secondary: #3b5fbb;
@@ -35,7 +37,7 @@
 /* Fonts */
 @font-face {
     font-family: 'Jacquard';
-    src: url('../fonts/Jacquard12-Regular.ttf') format('truetype');
+    src: url('/fonts/Jacquard12-Regular.ttf') format('truetype');
     font-weight: 600;
 }
 
@@ -78,15 +80,26 @@ a:hover {
     transform: scale(1.1);
 }
 
-}
-button:active {
-    transform: translateY(2px) scale(0.98);
-    box-shadow: 0.2rem 0.2rem 0.3rem rgba(0,0,0,0.4);
+/* Page sections */
+
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
 }
 
-iframe {
-    width: 50vw;
-    height: 60vh;
+body {
+    margin: 0;
+    font-family: 'GNF', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--text-color);
+    background-color: var(--footer-background-color);
+}
+
+main:not(.index) {
+    padding: 2rem;
+    min-height: 55vh;
 }
 
 header {
@@ -195,8 +208,42 @@ header {
     background-color: #ddd;
 }
 
+footer {
+    display: flex;
+    align-items: center;
+    background-color: var(--footer-background-color);
     padding: 2rem;
 }
+
+footer > nav {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 1rem;
+    min-width: fit-content;
+}
+
+/* Page elements */
+
+button {
+    padding: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+
+    border-radius: 4px;
+    box-shadow: 0.3rem 0.4rem 0.6rem black;
+    transition: all 0.15s ease;
+}
+button:hover {
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 0.5rem 0.7rem 1rem rgba(0,0,0,0.5);
+}
+button:active {
+    transform: translateY(2px) scale(0.98);
+    box-shadow: 0.2rem 0.2rem 0.3rem rgba(0,0,0,0.4);
+}
+
+/* Floor color selectors */
 
 .normal-section {
     background: 
@@ -255,22 +302,16 @@ header {
     border: 2px solid var(--fire-color-tertiary);
 }
 
-footer {
-    display: flex;
-    align-items: center;
-    background-color: var(--footer-background-color);
-    padding: 2rem;
+/* Common displays classes */
+.hidden {
+    display: none;
 }
 
-footer > nav {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    padding: 1rem;
-    min-width: fit-content;
+.block {
+    display: block;
 }
 
-/* ORDER */
+/* Common placement classes */
 .left-container {
     display: flex;
     flex-direction: column;
@@ -330,6 +371,7 @@ footer > nav {
     align-items: end;
 }
 
+/* Common spacing classes */
 
 .p-1 {
    padding: 1rem; 
