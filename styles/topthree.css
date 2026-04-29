@@ -1,0 +1,23 @@
+.tier-1, .tier-2, .tier-3 {
+    width: 10vw;
+    box-shadow: 1vw 2vh 1rem var(--background-color-bright);
+}
+
+#top1, #top2, #top3 {
+    text-align: center;
+}
+
+.tier-1 {
+    height: 20vh;
+    background-color: var(--ice-color-primary);
+}
+
+.tier-2 {
+    height: 15vh;
+    background-color: var(--ice-color-secondary);
+}
+
+.tier-3 {
+    height: 10vh;
+    background-color: var(--ice-color-tertiary);
+}

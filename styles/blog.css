@@ -1,0 +1,24 @@
+.post-item {
+    width: 60vw;
+    min-height: fit-content;
+    align-items: center;
+    border: 20px double var(--fire-color-primary);
+    background: 
+        url('/i/Dry_Lava_BaseColor.webp') center / contain,
+        linear-gradient(var(--background-color-bright), var(--background-color-dark));
+    transition: 0.2s all;
+}
+
+.post-item:hover {
+    transform: scale(1.02);
+}
+
+.post-item:active {
+    transform: scale(1.015);
+}
+
+.post-item::before {
+    content: "·";
+    color: var(--fire-color-primary);
+    font-size: 5rem;
+}

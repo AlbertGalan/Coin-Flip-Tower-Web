@@ -1,0 +1,124 @@
+* {
+    position: relative;
+    z-index: 1;
+}
+
+.thumbnail {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 0;
+
+    height: 100vh;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+    background-position-y: -10vh;
+    background-size: cover;
+    background-repeat: repeat-y;
+    background-attachment: fixed;
+}
+
+.light .thumbnail {
+    background-image: url(/i/clear_sky.jpg);
+}
+
+.dark .thumbnail {
+    background-image: url(/i/dark_sky.webp);
+}
+
+.coin {
+    z-index: 5;
+    width: 6rem;
+    height: 6rem;
+    perspective: 600px;
+    cursor: pointer;
+    transition: all 0.4s ease-out;
+}
+
+.coin:hover {
+    transform: scale(1.2);
+}
+
+.coin-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: all 0.4s ease-out;
+}
+
+.light .coin.fly .coin-inner {
+    animation: coinFlip 1.8s linear;
+}
+
+@keyframes coinFlip {
+    0%   { transform: rotateY(0deg)   scale(1); animation-timing-function: ease-in; }
+    25%  { transform: rotateY(225deg) scale(2); }
+    50%  { transform: rotateY(450deg) scale(3); animation-timing-function: ease-in; }
+    75%  { transform: rotateY(675deg) scale(2); }
+    100% { transform: rotateY(900deg) scale(1); animation-timing-function: ease-out; }
+}
+
+.dark .coin.fly .coin-inner {
+    animation: coinFlipDark 1.8s linear;
+}
+
+@keyframes coinFlipDark {
+    0%   { transform: rotateY(180deg)   scale(1); animation-timing-function: ease-in; }
+    25%  { transform: rotateY(405deg) scale(2); }
+    50%  { transform: rotateY(630deg) scale(3); animation-timing-function: ease-in; }
+    75%  { transform: rotateY(855deg) scale(2); }
+    100% { transform: rotateY(1080deg) scale(1); animation-timing-function: ease-out; }
+}
+
+.coin-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.coin-back {
+    transform: rotateY(180deg);
+}
+
+.dark .coin-inner {
+    transform: rotateY(180deg);
+}
+
+.gourge {
+    background: url(/i/gourge.webp);
+    margin-top: 90vh;
+    height: 8vh;
+    background-size: contain;
+    top: -8vh;
+    position: relative;
+    margin-bottom: -8vh;
+}
+
+.iframe-container {
+    position: relative;
+    width: 50%;
+    padding-top: 28.125%;
+}
+
+iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+hr {
+    height: 2vh;
+    border: 0;
+    background-color: rgb(93, 42, 6);
+    margin: 0;
+}
