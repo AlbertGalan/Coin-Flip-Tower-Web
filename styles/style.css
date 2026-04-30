@@ -326,13 +326,6 @@ button:active {
     align-items: center;
 }
 
-.right-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: end;
-}
-
 .row {
     display: flex;
     flex-direction: row;
@@ -419,5 +412,17 @@ button:active {
 
     .small-header {
         display: flex;
+    }
+
+    footer {
+        flex-direction: column;
+    }
+
+    footer nav {
+        flex-direction: row;
+    }
+
+    .left-container {
+        align-items: center;
     }
 }
