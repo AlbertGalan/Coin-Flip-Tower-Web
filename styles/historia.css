@@ -76,7 +76,11 @@
 }
 
 .maps > img {
-    max-width: 80vw;
+    width: 60%;
+}
+
+.rerefons-section {
+    width: 70%;
 }
 
 .rerefons-page {
@@ -87,13 +91,34 @@
     display: block;
 }
 
-.rerefons-button {
-    width: 25vw;
-    height: 15vh;
+.rerefons-button-list {
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 2rem;
 }
 
-.rerefons-button-list {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+.rerefons-button {
+    min-width: min-content;
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (max-width: 1024px) {
+    .maps > img {
+        width: 90%;
+    }
+
+    .rerefons-section {
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .rerefons-button-list {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .rerefons-button {
+        height: 5rem;
+    }
 }
