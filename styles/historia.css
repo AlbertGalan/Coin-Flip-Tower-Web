@@ -76,7 +76,8 @@
 }
 
 .maps > img {
-    max-width: 80vw;
+    width: 60%;
+}
 
 .rerefons-section {
     width: 70%;
