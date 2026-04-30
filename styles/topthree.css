@@ -21,3 +21,9 @@
     height: 10vh;
     background-color: var(--ice-color-tertiary);
 }
+
+@media screen and (max-width: 1024px) {
+    .tier-1, .tier-2, .tier-3 {
+        width: 25vw;
+    }
+}
