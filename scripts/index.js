@@ -1,7 +1,11 @@
+import { validateBlog } from "../scripts/utilities.js";
+
 document.addEventListener("DOMContentLoaded", function() {
 
     const coin = document.querySelector(".coin");
     const body = document.body;
+
+    //Obtenir tema de la pagina i actualitzar-lo
     let clicked = false;
     let tema = JSON.parse(localStorage.getItem("Tema"));
 
@@ -12,6 +16,8 @@ document.addEventListener("DOMContentLoaded", function() {
     coin.addEventListener("click", function() {
         if (clicked) return;
         clicked = true;
+        
+        
         coin.classList.add("fly");
         setTimeout(() => {
             if (body.classList.contains("light")) {
@@ -46,7 +52,10 @@ function actualizarBlog() {
 
     fetch("https://phpstack-1076337-5399863.cloudwaysapps.com/api/posts/uZl9WgoE59y7c3JTN0dyj7KUxkKNP0MpS2NM8msPOZ4eUEtusumqYRHubOGS")
         .then(resposta => resposta.json())
-        .then(dades => printPosts(dades))
+        .then(dades => {
+            validateBlog(dades);
+            printPosts(dades);
+        })
         .catch(error => console.log(error));
 }
 
