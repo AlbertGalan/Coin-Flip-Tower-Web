@@ -7,7 +7,6 @@
 }
 
 .carousel-track-wrap {
-    overflow: hidden;
     width: 100%;
     max-width: 400px;
 }
@@ -95,6 +94,19 @@
     border-radius: 2rem;
 }
 
+.character-btn {
+    bottom: 500px;
+    position: relative;
+    gap: 500px;
+}
+
+.character-btn * {
+    font-family: 'GNF', sans-serif;
+    width: 5rem;
+    height: 5rem;
+    font-size: 5rem;
+}
+
 .maps > img {
     width: 60%;
 }
@@ -124,6 +136,12 @@
 }
 
 @media screen and (max-width: 1024px) {
+    .character-btn {
+        top: 0;
+        position: unset;
+        gap: 2rem;
+    }
+
     .maps > img {
         width: 90%;
     }
