@@ -1,3 +1,5 @@
+import { validateBlog } from "./utilities.js";
+
 document.addEventListener("DOMContentLoaded", function() {
 
     actualizarBlog();
@@ -13,7 +15,10 @@ function actualizarBlog() {
 
     fetch("https://phpstack-1076337-5399863.cloudwaysapps.com/api/posts/uZl9WgoE59y7c3JTN0dyj7KUxkKNP0MpS2NM8msPOZ4eUEtusumqYRHubOGS")
         .then(resposta => resposta.json())
-        .then(dades => printPosts(dades))
+        .then(dades => {
+            validateBlog(dades);
+            printPosts(dades);
+        })
         .catch(error => console.log(error));
 }
 
