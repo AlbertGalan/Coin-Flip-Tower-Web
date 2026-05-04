@@ -4,6 +4,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
     const coin = document.querySelector(".coin");
     const body = document.body;
+    coin.classList.add("fly");
+    setTimeout(() => {
+        coin.classList.remove("fly")
+    }, 1760)
 
     //Obtenir tema de la pagina i actualitzar-lo
     let clicked = false;
