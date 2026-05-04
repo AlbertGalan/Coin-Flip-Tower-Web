@@ -1,4 +1,4 @@
-import { validateBlog } from "../scripts/utilities.js";
+import { validateBlog, validateUsers } from "../scripts/utilities.js";
 
 document.addEventListener("DOMContentLoaded", function() {
 
@@ -44,7 +44,10 @@ function actualitzarPodium() {
 
     fetch("https://phpstack-1076337-5399863.cloudwaysapps.com/api/classification/uZl9WgoE59y7c3JTN0dyj7KUxkKNP0MpS2NM8msPOZ4eUEtusumqYRHubOGS/3")
         .then(resposta => resposta.json())
-        .then(dades => printUsuaris(dades))
+        .then(dades => {
+            validateUsers(dades);
+            printUsuaris(dades);
+        })
         .catch(error => console.log(error));
 }
 

@@ -1,3 +1,5 @@
+import { validateUsers, validateOpinions } from "./utilities.js";
+
 let usersPage = 1;
 let opinionsPage = 1;
 let usuaris = [];
@@ -115,7 +117,8 @@ function actualitzarPodium() {
     fetch("https://phpstack-1076337-5399863.cloudwaysapps.com/api/classification/uZl9WgoE59y7c3JTN0dyj7KUxkKNP0MpS2NM8msPOZ4eUEtusumqYRHubOGS")
         .then(resposta => resposta.json())
         .then(dades => {
-            printUsuaris(dades)
+            validateUsers(dades);
+            printUsuaris(dades);
             printPodium(dades);
             checkButtonUsers(dades.data.length);
             usuaris = dades;
@@ -167,7 +170,8 @@ function actualitzarOpinions() {
     fetch("https://phpstack-1076337-5399863.cloudwaysapps.com/api/comments/uZl9WgoE59y7c3JTN0dyj7KUxkKNP0MpS2NM8msPOZ4eUEtusumqYRHubOGS")
         .then(resposta => resposta.json())
         .then(dades => { 
-            printOpinions(dades)
+            validateOpinions(dades);
+            printOpinions(dades);
             checkButtonOpinions(dades.data.length);
             opinions = dades;
         })
