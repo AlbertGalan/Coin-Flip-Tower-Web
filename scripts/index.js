@@ -4,6 +4,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
     const coin = document.querySelector(".coin");
     const body = document.body;
+    const header = document.querySelector("header");
+    const gourge = document.getElementsByClassName("gourge")[0];
 
     //Obtenir tema de la pagina i actualitzar-lo
     let clicked = false;
@@ -12,7 +14,19 @@ document.addEventListener("DOMContentLoaded", function() {
     if (!tema) {
         body.classList.replace("light", "dark");
     }
-    //NAHUEL HAZ QUE LA MONEDA GIRE AL CARGAR LA PAGINA
+
+    const observer = new IntersectionObserver(function(entries) {
+        entries.forEach((entry => {
+            if (entry.isIntersecting) {
+                header.style.display = "none";
+            } else {
+                header.style.display = "block";
+            }
+        }))
+    })
+
+    observer.observe(gourge);
+
     coin.addEventListener("click", function() {
         if (clicked) return;
         clicked = true;
