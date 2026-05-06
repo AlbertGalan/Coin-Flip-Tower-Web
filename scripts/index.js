@@ -4,6 +4,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
     const coin = document.querySelector(".coin");
     const body = document.body;
+    coin.classList.add("fly");
+    setTimeout(() => {
+        coin.classList.remove("fly")
+    }, 1760)
     const header = document.querySelector("header");
     const gourge = document.getElementsByClassName("gourge")[0];
 
