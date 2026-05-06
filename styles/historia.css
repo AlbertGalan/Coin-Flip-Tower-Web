@@ -1,4 +1,17 @@
 .carousel {
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    padding: 2rem 0;
+    overflow-x: hidden;
+}
+
+.carousel-track-wrap {
+    width: 100%;
+    max-width: 400px;
+}
+
+.carousel-track {
     display: flex;
     align-items: center;
     gap: 1rem;
