@@ -101,6 +101,10 @@
     margin-bottom: -8vh;
 }
 
+.trailer {
+    padding-top: 5rem;
+}
+
 .iframe-container {
     position: relative;
     width: 50%;
