@@ -70,6 +70,8 @@
     font-size: 1rem;
     outline: none;
     transition: all 0.15s ease;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
 }
 
 .player-coments input:focus,
