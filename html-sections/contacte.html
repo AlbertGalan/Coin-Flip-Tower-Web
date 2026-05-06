@@ -28,49 +28,57 @@
 
     <!-- Stylesheets -->
     <link rel="stylesheet" type="text/css" href="/styles/style.css">
+    <link rel="stylesheet" type="text/css" href="/styles/contacte.css">
 </head>
 <body class="light">
     <header>
-        <a href="../index.html"><img src="../i/logo.png"></a>
-        <nav>
-            <a href="../html-sections/historia.html">HISTÒRIA</a>
-            <a href="../html-sections/comunitat.html">COMUNITAT</a>
-            <a href="#">CONVIDA'M A UN CAFÈ</a>
-        </nav>
+        <div class="big-header">
+            <a href="/index.html"><img src="/i/logo.png"></a>
+            <nav>
+                <a href="/html-sections/blog.html" class="fire-nav">BLOG</a>
+                <a href="/html-sections/comunitat.html" class="ice-nav">COMUNITAT</a>
+                <a href="/html-sections/historia.html" class="ice-nav">HISTÒRIA</a>
+                <a href="/html-sections/media.html" class="ice-nav">MEDIA</a>
+            </nav>
+        </div>
+        <div class="small-header">
+            <div class="dropdown">
+                <button>
+                    <svg width="32px" height="32px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4 18L20 18" stroke="#000000" stroke-width="2" stroke-linecap="round"></path> <path d="M4 12L20 12" stroke="#000000" stroke-width="2" stroke-linecap="round"></path> <path d="M4 6L20 6" stroke="#000000" stroke-width="2" stroke-linecap="round"></path> </g></svg>
+                </button>
+                <div>
+                    <a href="/index.html">MENU</a>
+                    <a href="/html-sections/blog.html" class="fire-nav">BLOG</a>
+                    <a href="/html-sections/comunitat.html" class="ice-nav">COMUNITAT</a>
+                    <a href="/html-sections/historia.html" class="ice-nav">HISTÒRIA</a>
+                    <a href="/html-sections/media.html" class="ice-nav">MEDIA</a>
+                </div>
+            </div>
+        </div>
     </header>
+
     <main class="normal-section">
         <section class="center-container">
             <h1>Contacte</h1>
             <h4>No hi ha res mes important que rebre el feedback dels nostres visitants!</h2>
         </section>
         <div class="contact-container">
-            <section>
-                <form class="contact-form">
-                    <div>
-                        <label for="nombre">Nom</label>
-                        <input id="name" type="text" required>
-                    </div>
-                    <div>
-                        <label for="email">Email</label>
-                        <input id="email" type="email" required>
-                    </div>
-                    <div>
-                        <label for="Raó">Raó</label>
-                        <input id="subject" type="text" required>
-                    </div>
-                    <div>
-                        <label for="missatge">Missatge</label>
-                        <textarea id="text" required></textarea>
-                    </div>
-                    <div>
-                        <button id="submit" type="submit">enviar</button>
-                    </div>
-                </form>
+            <form class="contact-form column a-center">
+                <label for="name">Nom</label>
+                <input id="name" name="name" type="text" required>
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" required>
+                <label for="subject">Raó</label>
+                <input id="subject" name="subject" type="text" required>
+                <label for="text">Missatge</label>
+                <textarea id="text" name="text" required></textarea>
+                <button id="submit" type="submit">Enviar</button>
+            </form>
         </div>
     </main>
     <footer>
-        <nav>
-            <a href="/html-sections/contacte.html">CONTACTE</a>
+        <nav class="g-1">
+            <a href="/html-sections/contacte.html" class="active-btn">CONTACTE</a>
             <a href="/html-sections/equip.html">EQUIP</a>
         </nav>
         <p>© 2026 Coin Flip Tower. Tots els drets reservats. Coin Flip Tower és un projecte acadèmic desenvolupat per Albert Galán. Tots els noms, personatges, història, mecàniques i elements del joc presentats en aquesta pàgina formen part del concepte del videojoc. Queda prohibida la reproducció total o parcial del contingut d’aquesta web sense autorització de l’autor.</p>

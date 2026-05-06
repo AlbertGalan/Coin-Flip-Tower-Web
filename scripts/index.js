@@ -1,17 +1,27 @@
+import { validateBlog, validateUsers } from "../scripts/utilities.js";
+
 document.addEventListener("DOMContentLoaded", function() {
 
     const coin = document.querySelector(".coin");
     const body = document.body;
+    coin.classList.add("fly");
+    setTimeout(() => {
+        coin.classList.remove("fly")
+    }, 1760)
+
+    //Obtenir tema de la pagina i actualitzar-lo
     let clicked = false;
     let tema = JSON.parse(localStorage.getItem("Tema"));
 
     if (!tema) {
         body.classList.replace("light", "dark");
     }
-
+    //NAHUEL HAZ QUE LA MONEDA GIRE AL CARGAR LA PAGINA
     coin.addEventListener("click", function() {
         if (clicked) return;
         clicked = true;
+        
+        
         coin.classList.add("fly");
         setTimeout(() => {
             if (body.classList.contains("light")) {
@@ -38,7 +48,10 @@ function actualitzarPodium() {
 
     fetch("https://phpstack-1076337-5399863.cloudwaysapps.com/api/classification/uZl9WgoE59y7c3JTN0dyj7KUxkKNP0MpS2NM8msPOZ4eUEtusumqYRHubOGS/3")
         .then(resposta => resposta.json())
-        .then(dades => printUsuaris(dades))
+        .then(dades => {
+            validateUsers(dades);
+            printUsuaris(dades);
+        })
         .catch(error => console.log(error));
 }
 
@@ -46,7 +59,10 @@ function actualizarBlog() {
 
     fetch("https://phpstack-1076337-5399863.cloudwaysapps.com/api/posts/uZl9WgoE59y7c3JTN0dyj7KUxkKNP0MpS2NM8msPOZ4eUEtusumqYRHubOGS")
         .then(resposta => resposta.json())
-        .then(dades => printPosts(dades))
+        .then(dades => {
+            validateBlog(dades);
+            printPosts(dades);
+        })
         .catch(error => console.log(error));
 }
 

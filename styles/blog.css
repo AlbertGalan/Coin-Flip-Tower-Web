@@ -22,3 +22,9 @@
     color: var(--fire-color-primary);
     font-size: 5rem;
 }
+
+@media screen and (max-width: 1024px) {
+    .post-item::before {
+        content: "";
+    }
+}
