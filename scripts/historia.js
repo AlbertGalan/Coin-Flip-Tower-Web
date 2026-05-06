@@ -18,14 +18,25 @@ document.addEventListener("DOMContentLoaded", function() {
     next.addEventListener("click", () => goTo(current + 1));    
 
     function goTo(index) {
-        current = Math.max(0, Math.min(index, cards.length - 1));
-        const firstCardOffset = cards[0].offsetLeft - track.offsetLeft;
-        const offset = cards[current].offsetLeft - track.offsetLeft - firstCardOffset;
-        checkButtons(index);
-        track.style.transform = `translateX(-${offset}px)`;
-        elementActive.classList.remove("active");
-        characters[index].classList.add("active");
-        elementActive = characters[index];
+        try {
+            checkButtons(index);
+            current = Math.max(0, Math.min(index, cards.length - 1));
+            const firstCardOffset = cards[0].offsetLeft - track.offsetLeft;
+            const offset = cards[current].offsetLeft - track.offsetLeft - firstCardOffset;
+            track.style.transform = `translateX(-${offset}px)`;
+            elementActive.classList.remove("active");
+            characters[index].classList.add("active");
+            elementActive = characters[index];
+        } catch (error) {
+            if (index == -1) {
+                index++;
+            } else {
+                index--;
+            }
+            elementActive.classList.remove("active");
+            characters[index].classList.add("active");
+            elementActive = characters[index];
+        }
     }
 
     if (!tema) {
