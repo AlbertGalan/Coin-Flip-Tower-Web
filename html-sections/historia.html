@@ -49,13 +49,21 @@
     
         <section class="center-container">
             <h2>Personatges</h2>
-            <div class="h-scroll row p-2">
-                <div class="character column a-center p-1 j-start">
-                    <div class="character-inner">
-                        <div class="character-front">
-                            <img class="charimg" src="/i/edgar.png">
-                            <h3>Edgar Cavendish</h3>
-                            <p>Alumne de l'acadèmia de màgia més prestigiosa del regne, un jove resilient que no es rendeix a la primera de canvi, té totes les assignatures aprovades, excepte la de màgia física, la qual ha anat a recuperar més de 35 cops sense resultat.</p>
+            <div class="carousel column a-center">
+                <div class="carousel-track-wrap">
+                    <div class="carousel-track row p-2">
+                        <div class="character active column a-center p-1 j-start">
+                            <div class="character-inner">
+                                <div class="character-front">
+                                    <img class="charimg" src="/i/edgar.png">
+                                    <h3>Edgar Cavendish</h3>
+                                    <p>Alumne de l'acadèmia de màgia més prestigiosa del regne, un jove resilient que no es rendeix a la primera de canvi, té totes les assignatures aprovades, excepte la de màgia física, la qual ha anat a recuperar més de 35 cops sense resultat.</p>
+                                </div>
+                                <div class="character-back">
+                                    <h3>Edgar Cavendish</h3>
+                                    <img class="cardimg" src="/i/logo.png">
+                                </div>
+                            </div>
                         </div>
                         <div class="character-back">
                             <h3>Edgar Cavendish</h3>
@@ -101,6 +109,9 @@
                             <img class="cardimg" src="/i/logo.png">
                         </div>
                     </div>
+                <div class="character-btn row a-start m-0 g-2">
+                    <button class="carousel-prev">←</button>
+                    <button class="carousel-next">→</button>
                 </div>
             </div>
         </section>
@@ -114,25 +125,29 @@
     
         <section class="center-container column a-center">
             <h2>Rerefons Argumentals</h2>
-            <div class="rerefons-button-list">
-                <button class="rerefons-button m-1">La prova antiga</button>
-                <button class="rerefons-button m-1">L’Error del Professor</button>
-                <button class="rerefons-button m-1">El Secret de la Moneda</button>
+            <div class="row rerefons-section">
+                <div class="rerefons-button-list column a-center">
+                    <button class="rerefons-button m-1">La prova antiga</button>
+                    <button class="rerefons-button m-1">L’Error del Professor</button>
+                    <button class="rerefons-button m-1">El Secret de la Moneda</button>
+                </div>
+                <div class="column j-center a-start">
+                    <article class="column a-start rerefons-page rerefons-page-active">
+                        <h3>La prova antiga</h3>
+                        <p>La Coin Tower no és una simple masmorra, sinó una prova ancestral creada pels fundadors de l’acadèmia per seleccionar els mags capaços d’entendre les lleis fonamentals del món. Durant generacions, només uns pocs han aconseguit superar-la, i molts altres han quedat atrapats en el seu interior, convertint-se en part del mateix laberint. El guardià no és només una veu, sinó una entitat vinculada a la torre que observa, jutja i decideix qui és digne de sortir. N’Edgar no només lluita per aprovar, sinó per demostrar que pot dominar una màgia que va més enllà del que s’ensenya a les aules.</p>
+                    </article>
+        
+                    <article class="column a-start rerefons-page">
+                        <h3>L’Error del Professor</h3>
+                        <p>El professor Tirius no ha escollit aquesta prova per casualitat. Anys enrere, ell mateix va entrar a la Coin Tower i gairebé no en va sortir amb vida. Des d’aleshores, sap que la torre amaga irregularitats, com si la seva estructura canviés o reaccionés a qui hi entra. En enviar-hi n’Edgar, no només li dona una oportunitat, sinó que intenta confirmar les seves sospites: que la torre té voluntat pròpia. A mesura que el protagonista avança, comencen a aparèixer anomalies que no haurien d’existir, posant en dubte si aquesta és realment una prova justa.</p>
+                    </article>
+        
+                    <article class="column a-start rerefons-page">
+                        <h3>El Secret de la Moneda</h3>
+                        <p>La torre existeix dins una moneda encantada, un artefacte antic capaç de contenir un espai molt més gran del que aparenta. Aquesta moneda va ser creada per un mag desconegut que volia encapsular un fragment de realitat i controlar les seves lleis físiques. Amb el temps, l’artefacte es va tornar inestable, i els seus tres nivells representen diferents estats d’aquest poder descontrolat. N’Edgar, sense saber-ho, no només intenta escapar, sinó que està interactuant amb una relíquia que podria alterar l’equilibri de la màgia si arriba a ser dominada o destruïda.</p>
+                    </article>
+                </div>
             </div>
-            <article class="column a-start rerefons-page rerefons-page-active">
-                <h3>La prova antiga</h3>
-                <p>La Coin Tower no és una simple masmorra, sinó una prova ancestral creada pels fundadors de l’acadèmia per seleccionar els mags capaços d’entendre les lleis fonamentals del món. Durant generacions, només uns pocs han aconseguit superar-la, i molts altres han quedat atrapats en el seu interior, convertint-se en part del mateix laberint. El guardià no és només una veu, sinó una entitat vinculada a la torre que observa, jutja i decideix qui és digne de sortir. N’Edgar no només lluita per aprovar, sinó per demostrar que pot dominar una màgia que va més enllà del que s’ensenya a les aules.</p>
-            </article>
-
-            <article class="column a-start rerefons-page">
-                <h3>L’Error del Professor</h3>
-                <p>El professor Tirius no ha escollit aquesta prova per casualitat. Anys enrere, ell mateix va entrar a la Coin Tower i gairebé no en va sortir amb vida. Des d’aleshores, sap que la torre amaga irregularitats, com si la seva estructura canviés o reaccionés a qui hi entra. En enviar-hi n’Edgar, no només li dona una oportunitat, sinó que intenta confirmar les seves sospites: que la torre té voluntat pròpia. A mesura que el protagonista avança, comencen a aparèixer anomalies que no haurien d’existir, posant en dubte si aquesta és realment una prova justa.</p>
-            </article>
-
-            <article class="column a-start rerefons-page">
-                <h3>El Secret de la Moneda</h3>
-                <p>La torre existeix dins una moneda encantada, un artefacte antic capaç de contenir un espai molt més gran del que aparenta. Aquesta moneda va ser creada per un mag desconegut que volia encapsular un fragment de realitat i controlar les seves lleis físiques. Amb el temps, l’artefacte es va tornar inestable, i els seus tres nivells representen diferents estats d’aquest poder descontrolat. N’Edgar, sense saber-ho, no només intenta escapar, sinó que està interactuant amb una relíquia que podria alterar l’equilibri de la màgia si arriba a ser dominada o destruïda.</p>
-            </article>
         </section>
     </main>
 
