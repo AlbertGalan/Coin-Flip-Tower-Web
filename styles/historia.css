@@ -12,14 +12,11 @@
 
 .character {
     perspective: 1000px;
-    min-width: 45vw;
-    max-height: 60vh;
+    flex-shrink: 0;
     position: relative;
     transition: transform 0.3s ease;
-}
-
-.character:hover {
-    transform: scale(1.05);
+    min-width: 100%;
+    max-width: 100%;
 }
 
 .character-inner {
@@ -113,12 +110,8 @@
         width: 90%;
     }
 
-    .rerefons-button-list {
-        flex-direction: row;
-        justify-content: center;
-    }
-
     .rerefons-button {
         height: 5rem;
+        width: 50%;
     }
 }
