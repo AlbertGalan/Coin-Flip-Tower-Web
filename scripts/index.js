@@ -8,6 +8,8 @@ document.addEventListener("DOMContentLoaded", function() {
     setTimeout(() => {
         coin.classList.remove("fly")
     }, 1760)
+    const header = document.querySelector("header");
+    const gourge = document.getElementsByClassName("gourge")[0];
 
     //Obtenir tema de la pagina i actualitzar-lo
     let clicked = false;
