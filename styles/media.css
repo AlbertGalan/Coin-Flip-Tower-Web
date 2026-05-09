@@ -15,13 +15,14 @@
   margin-top: 8px;
   vertical-align: middle;
   width: 100%;
+
 }
 
 /* CARRUSEL */  
 
 .carrusel-container {
   position: relative;
-  width: 80%;
+  max-width: 70%;
   margin: auto;
   overflow: hidden;
   border: 15px double var(--fire-color-primary);
@@ -41,10 +42,12 @@
 
 .carrusel-item img {
   width: 100%;
+  height: auto;
   display: block;
+  object-fit: cover;
 }
 
-.carousel-prev, .carousel-next {
+.carrusel-prev, .carrusel-next {
     flex-shrink: 0;
     width: 3rem;
     height: 3rem;
@@ -62,6 +65,10 @@
   .column {
     flex: 50%;
     max-width: 50%;
+  }
+
+  .carrusel-container{
+    max-width: 80%;
   }
 }
 
