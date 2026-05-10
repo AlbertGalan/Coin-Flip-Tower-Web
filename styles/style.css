@@ -194,6 +194,23 @@ footer > nav {
 
 /* Page elements */
 
+
+
+.iframe-container {
+    position: relative;
+    width: 50%;
+    padding-top: 28.125%;
+}
+
+iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
 button {
     padding: 1rem;
     padding-left: 2rem;
