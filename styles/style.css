@@ -83,7 +83,6 @@ html {
 }
 
 body {
-    overflow-x: hidden;
     margin: 0;
     font-family: 'GNF', sans-serif;
     font-size: 1.1rem;

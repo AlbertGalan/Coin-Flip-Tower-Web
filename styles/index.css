@@ -3,6 +3,10 @@
     z-index: 1;
 }
 
+main {
+    overflow-x: hidden;
+}
+
 .thumbnail {
     position: fixed;
     top: 0;
