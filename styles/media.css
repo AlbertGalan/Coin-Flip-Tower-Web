@@ -1,0 +1,80 @@
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+  justify-content: center;
+}
+
+.column {
+  flex: 25%;
+  max-width: 20%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+
+}
+
+/* CARRUSEL */  
+
+.carrusel-container {
+  position: relative;
+  max-width: 70%;
+  margin: auto;
+  overflow: hidden;
+  border: 15px double var(--fire-color-primary);
+  background: url('/i/Dry_Lava_BaseColor.webp') center / contain, linear-gradient(var(--background-color-bright), var(--background-color-dark));
+  transition: 0.2s all;
+  margin-bottom: 2rem;
+}
+
+.carrusel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carrusel-item {
+  min-width: 100%;
+}
+
+.carrusel-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.carrusel-prev, .carrusel-next {
+    flex-shrink: 0;
+    width: 3rem;
+    height: 3rem;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    z-index: 5;
+}
+
+/* MEDIAQUERIES */
+
+@media screen and (max-width: 800px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+
+  .carrusel-container{
+    max-width: 80%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}

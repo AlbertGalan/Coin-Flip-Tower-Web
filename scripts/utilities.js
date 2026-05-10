@@ -9,7 +9,7 @@ export function validateBlog(posts) {
         type: "object",
         properties: {
             title: { type: "string" },
-            content: { type: "string", pattern: "^<p>.*</p>$"},
+            content: { type: "string" },
         },
         required: ["title", "content"],
         additionalProperties: false

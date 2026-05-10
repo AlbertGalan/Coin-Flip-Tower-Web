@@ -1,3 +1,5 @@
+import { validateBlog, validateUsers } from "./utilities.js";
+
 document.addEventListener("DOMContentLoaded", function() {
 
     actualitzarPodium();
@@ -29,7 +31,7 @@ let balls=[]
 
 function actualitzarPodium() {
 
-    fetch("https://phpstack-1076337-5399863.cloudwaysapps.com/api/classification/pHJNhm719MN5LCVqE839lOse0qvlbL1lBXndZmAWoJfiPXZFQHmgNQrzUHYS/3")
+    fetch("https://phpstack-1076337-5399863.cloudwaysapps.com/api/classification/uZl9WgoE59y7c3JTN0dyj7KUxkKNP0MpS2NM8msPOZ4eUEtusumqYRHubOGS/3")
         .then(resposta => resposta.json())
         .then(dades => printUsuaris(dades))
         .catch(error => console.log(error));
@@ -37,7 +39,7 @@ function actualitzarPodium() {
 
 function actualizarBlog() {
 
-    fetch("https://phpstack-1076337-5399863.cloudwaysapps.com/api/posts/pHJNhm719MN5LCVqE839lOse0qvlbL1lBXndZmAWoJfiPXZFQHmgNQrzUHYS")
+    fetch("https://phpstack-1076337-5399863.cloudwaysapps.com/api/posts/uZl9WgoE59y7c3JTN0dyj7KUxkKNP0MpS2NM8msPOZ4eUEtusumqYRHubOGS")
         .then(resposta => resposta.json())
         .then(dades => printPosts(dades))
         .catch(error => console.log(error));
@@ -47,8 +49,7 @@ function printPosts(posts) {
 
     const postlist = document.getElementById("post-list");
 
-    for (let i = 0; i < 3; i++) {
-
+    for (let i = 0; (i < 3) && posts.data.length > i; i++) {
         let p = document.createElement("p");
         let h4 = document.createElement("h4");
         let div = document.createElement("div");
@@ -59,7 +60,7 @@ function printPosts(posts) {
         h4.classList.add("m-1");
         article.classList.add("post-item", "row", "j-start", "a-start", "g-1", "p-1", "m-2");
 
-        p.textContent = `${posts.data[i].content.slice(0, 99)}...` 
+        p.innerHTML = `${posts.data[i].content.slice(0, 99)}...` 
 
         h4.textContent = posts.data[i].title;
 
@@ -69,9 +70,9 @@ function printPosts(posts) {
 
         article.addEventListener("click", function() {
             if (!ampli) {
-                p.textContent = posts.data[i].content;
+                p.innerHTML = posts.data[i].content;
             } else {
-                p.textContent = `${posts.data[i].content.slice(0, 99)}...`
+                p.innerHTML = `${posts.data[i].content.slice(0, 99)}...`
             }
             ampli = !ampli;
         })

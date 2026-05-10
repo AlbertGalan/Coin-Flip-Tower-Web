@@ -23,16 +23,17 @@
     <link rel="icon" type="image/x-icon" href="/i/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/styles/style.css">
+    <link rel="stylesheet" type="text/css" href="/styles/media.css">
 </head>
 <body class="light">
     <header>
         <div class="big-header">
             <a href="/index.html"><img src="/i/logo.png"></a>
             <nav>
-                <a href="/html-sections/blog.html">BLOG</a>
                 <a href="/html-sections/comunitat.html">COMUNITAT</a>
-                <a href="/html-sections/historia.html">HISTÒRIA</a>
                 <a href="/html-sections/media.html" class="active-btn">MEDIA</a>
+                <a href="/html-sections/historia.html">HISTÒRIA</a>
+                <a href="/html-sections/blog.html">BLOG</a>
             </nav>
         </div>
         <div class="small-header">
@@ -42,16 +43,16 @@
                 </button>
                 <div>
                     <a href="/index.html">MENU</a>
-                    <a href="/html-sections/blog.html">BLOG</a>
                     <a href="/html-sections/comunitat.html">COMUNITAT</a>
-                    <a href="/html-sections/historia.html">HISTÒRIA</a>
                     <a href="/html-sections/media.html" class="active-btn">MEDIA</a>
+                    <a href="/html-sections/historia.html">HISTÒRIA</a>
+                    <a href="/html-sections/blog.html">BLOG</a>
                 </div>
             </div>
         </div>
     </header>
 
-    <main class="ice-section"> 
+    <main class="fire-section"> 
         <h1>Media</h1>
         
         <section class="center-container">
@@ -61,26 +62,56 @@
     
         <section class="center-container">
             <h2>Screenshots</h2>
-            <article>
-                <span>
-                    <img>
-                    <h3></h3>
-                    <p></p>
-                </span>
-            </article>
+            <div class="row">
+                <div class="column">
+                    <img src="/i/normal_map.png">
+                    <img src="/i/lava_map.png">
+                    <img src="/i/color_puzzle.png">
+                    <img src="/i/cards.png">
+                </div>
+                <div class="column">
+                    <img src="/i/lava_gear.png">
+                    <img src="/i/lava_colors.png">
+                    <img src="/i/ice_map.png">
+                    <img src="/i/guard_patrol.png">
+                </div>
+                <div class="column">
+                    <img src="/i/corridor.png">
+                    <img src="/i/lava_arc.png">
+                    <img src="/i/rulette.png">
+                    <img src="/i/lava_island.png">
+                </div>
+            </div>
         </section>
         
         <section class="center-container">
             <h2>Concept art</h2>
-            <img src="">
-            <img src="">
-            <img src="">
-            <img src="">
-            <img src="">
-            <img src="">
-            <img src="">
-            <img src="">
-            <img src="">
+            <div class="carrusel-container">
+                <div class="carrusel-track" id="track">
+                    <div class="carrusel-item">
+                        <img src="/i/concept_dungeon1.png" alt="1">
+                    </div>
+                    <div class="carrusel-item">
+                        <img src="/i/concept_dungeon3.png" alt="2">
+                    </div>
+                    <div class="carrusel-item">
+                        <img src="/i/concept_hielo1.png" alt="3">
+                    </div>
+                    <div class="carrusel-item">
+                        <img src="/i/concept_lava.png" alt="3">
+                    </div>
+                    <div class="carrusel-item">
+                        <img src="/i/concept_dungeon2.png" alt="3">
+                    </div>
+                    <div class="carrusel-item">
+                        <img src="/i/concept_hielo2.png" alt="3">
+                    </div>
+                </div>
+            </div>
+            <div class="character-btn flex row a-start m-0 g-2">
+                    <button class="carrusel-prev">←</button>
+                    <button class="carrusel-next">→</button>
+                </div>
         </section>
     </main>
 
