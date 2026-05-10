@@ -25,6 +25,56 @@ document.addEventListener("DOMContentLoaded", function() {
     
     startGravity();
     
+    const coin = document.querySelector(".coin");
+    const body = document.body;
+    coin.classList.add("fly");
+
+    let clicked = true;
+    setTimeout(() => {
+        coin.classList.remove("fly")
+        clicked = false;
+    }, 1760)
+
+    const header = document.querySelector("header");
+    const gourge = document.getElementsByClassName("gourge")[0];
+
+    //Obtenir tema de la pagina i actualitzar-lo
+    let tema = JSON.parse(localStorage.getItem("Tema"));
+
+    if (!tema) {
+        body.classList.replace("light", "dark");
+    }
+
+    const observer = new IntersectionObserver(function(entries) {
+        entries.forEach((entry => {
+            if (entry.isIntersecting) {
+                header.style.display = "none";
+            } else {
+                header.style.display = "block";
+            }
+        }))
+    })
+
+    observer.observe(gourge);
+
+    coin.addEventListener("click", function() {
+        if (clicked) return;
+        clicked = true;
+        
+        
+        coin.classList.add("fly");
+        setTimeout(() => {
+            if (body.classList.contains("light")) {
+                body.classList.replace("light", "dark");
+                localStorage.setItem("Tema", JSON.stringify(false))
+            } else {
+                body.classList.replace("dark", "light");
+                localStorage.setItem("Tema", JSON.stringify(true))
+            }
+            coin.classList.remove("fly");
+            clicked = false;
+        }, 1760)
+    })
 })
 
 let balls=[]
