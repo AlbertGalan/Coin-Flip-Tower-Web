@@ -444,6 +444,13 @@ nav a:active {
 
 /* Media queries */
 
+@media screen and (max-width:1024px) {
+    .iframe-container {
+        width: 100%;
+        padding-top: 56.25%;
+    }
+}
+
 @media screen and (max-width: 750px) {
     h1 {
         padding-top: 3rem;
