@@ -3,10 +3,25 @@ document.addEventListener("DOMContentLoaded", function() {
     actualitzarPodium();
     actualizarBlog();
 
-    //createObject(fireZone,-200,150,68.75,"i/Table.png",6);
-    //createObject(fireZone,-100, 50,46.87, `i/Stool.png`,4);
-    //createObject(fireZone,-300, 50,46.87, `i/Stool.png`,4);
-    //startGravity();
+    createObject(Blog,-700,150,68.75,"i/Table.png",6);
+    createObject(Blog,-600, 50,46.87, `i/Stool.png`,4);
+    createObject(Blog,-800, 50,46.87, `i/Stool.png`,4);
+    createObject(Blog,500, 50,50, `i/SmallBox.png`,5);
+    createObject(Blog, 760, 56.25, 71.875, `i/Barrel.png`,7);
+
+    createObject(topPlayers, -700, 100, 100, `i/LargeBox.png`,8);
+    createObject(topPlayers, -626, 50, 50, `i/SmallBox.png`,5);
+    createObject(topPlayers, -786, 75, 75, `i/MediumBox.png`,6);
+    createObject(topPlayers, 700, 50, 46.87, `i/Stool.png`,5);
+    createObject(topPlayers, 600, 150, 68.75, `i/Table.png`,5);
+
+    createObject(media, 200, 50, 50, `i/SmallBox.png`,5);
+    createObject(media, 263, 75, 75, `i/MediumBox.png`,6);
+
+    createObject(lore, -226, 100, 100, `i/LargeBox.png`,8);
+    createObject(lore, -316, 56.25, 71.875, `i/Barrel.png`,7);
+    
+    startGravity();
     
 })
 
@@ -166,7 +181,7 @@ function loop() {
   })
   requestAnimationFrame(loop);
   
-  console.log('loop')
+  
   if (iterations>200){
     //stopLoop();
   }
