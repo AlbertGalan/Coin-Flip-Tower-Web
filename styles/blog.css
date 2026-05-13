@@ -4,7 +4,7 @@
     align-items: center;
     border: 20px double var(--fire-color-primary);
     background: 
-        url('/i/Dry_Lava_BaseColor.webp') center / contain,
+        url('../i/Dry_Lava_BaseColor.webp') center / contain,
         linear-gradient(var(--background-color-bright), var(--background-color-dark));
     transition: 0.2s all;
 }

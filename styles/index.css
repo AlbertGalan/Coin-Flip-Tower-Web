@@ -28,11 +28,11 @@ main {
 }
 
 .light .thumbnail {
-    background-image: url(/i/clear_sky.jpg);
+    background-image: url(../i/clear_sky.jpg);
 }
 
 .dark .thumbnail {
-    background-image: url(/i/dark_sky.webp);
+    background-image: url(../i/dark_sky.webp);
 }
 
 .coin {
@@ -96,7 +96,7 @@ main {
 }
 
 .gourge {
-    background: url(/i/gourge.webp);
+    background: url(../i/gourge.webp);
     margin-top: 90vh;
     height: 8vh;
     background-size: contain;
