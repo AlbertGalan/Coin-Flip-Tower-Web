@@ -87,7 +87,7 @@
     transform: rotateY(180deg);
     border: 10px double var(--ice-color-tertiary);
     background: 
-        url('/i/dark_sky.webp') center / contain,
+        url('../i/dark_sky.webp') center / contain,
         linear-gradient(#a5a5a6);
 }
 

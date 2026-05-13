@@ -37,13 +37,13 @@
 /* Fonts */
 @font-face {
     font-family: 'Jacquard';
-    src: url('/fonts/Jacquard12-Regular.ttf') format('truetype');
+    src: url('../fonts/Jacquard12-Regular.ttf') format('truetype');
     font-weight: 600;
 }
 
 @font-face {
     font-family: 'GNF';
-    src: url('/fonts/GNF\ TTF.ttf') format('truetype');
+    src: url('../fonts/GNF\ TTF.ttf') format('truetype');
 }
 
 /* Font elements */
@@ -106,7 +106,7 @@ header {
 
 .big-header {
     background: 
-        url('/i/Bricks_diffuse.webp') center / contain,
+        url('../i/Bricks_diffuse.webp') center / contain,
         linear-gradient(var(--background-color-bright), var(--background-color-dark));
     padding: 0.5rem 1rem;
     display: flex;
@@ -247,14 +247,14 @@ nav a:active {
 
 .normal-section {
     background: 
-        url('/i/Bricks_diffuse.webp') center / contain,
+        url('../i/Bricks_diffuse.webp') center / contain,
         linear-gradient(var(--background-color-bright), var(--background-color-dark));
     background-size: cover;
 }
 
 .ice-section {
     background: 
-        url('/i/Ice_3_AmbientOcclusion.webp') center / contain,
+        url('../i/Ice_3_AmbientOcclusion.webp') center / contain,
         linear-gradient(90deg, var(--header-background-color), var(--background-color-bright));
     background-size: cover;
 }
@@ -292,7 +292,7 @@ nav a:active {
 
 .fire-section {
     background: 
-        url('/i/Dry_Lava_BaseColor.webp') center / contain,
+        url('../i/Dry_Lava_BaseColor.webp') center / contain,
         linear-gradient(var(--background-color-bright), var(--background-color-dark));
     background-size: cover;
 }
